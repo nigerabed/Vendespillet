@@ -23,7 +23,7 @@ h1{
 article div{
     height: 10em;
     width: 60%;
-    border: 4px solid black;
+    /* border: 4px solid black; */
 }
 
 
@@ -47,6 +47,9 @@ article div{
   transition: transform 1500ms;
   transform-style: preserve-3d;
   color: rgb(213, 222, 230);
+  /* border: 2px solid black; */
+  /* border-radius: 2rem; */
+
 }
 
 .front,
@@ -55,6 +58,8 @@ article div{
   width: 100%; 
   position: absolute;
   backface-visibility: hidden;
+    border-radius: 2rem;
+    border: 2px solid black;
 }
 
 .front {
@@ -62,7 +67,7 @@ article div{
 }
 
 .back {
-  background-color: #83866b;
+  background-color:rgb(134, 92, 40);
   transform: rotateY(180deg);
   text-align: center;
 }
