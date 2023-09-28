@@ -20,6 +20,14 @@ h1{
     grid-template-columns: repeat(4, 1fr);
 }
 
+article div{
+    height: 10em;
+    width: 60%;
+    border: 4px solid black;
+}
+
+
+
 .container {
   width: 200px;
   height: 250px;
@@ -38,6 +46,7 @@ h1{
   position: relative;
   transition: transform 1500ms;
   transform-style: preserve-3d;
+  color: rgb(213, 222, 230);
 }
 
 .front,
@@ -49,11 +58,11 @@ h1{
 }
 
 .front {
-  background: green;
+  background: rgb(97, 100, 97);
 }
 
 .back {
-  background-color: #3a3a3a;
+  background-color: #83866b;
   transform: rotateY(180deg);
   text-align: center;
 }
