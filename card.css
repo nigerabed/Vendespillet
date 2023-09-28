@@ -1,0 +1,59 @@
+body{
+    background-color: bisque;
+}
+header{
+    height: 6em;
+    border: 2px solid black;
+    background-color: rgb(190, 146, 92);
+}
+h1{
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 3em;
+    
+
+}
+
+#card-box{
+    width:70%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.container {
+  width: 200px;
+  height: 250px;
+  perspective: 800px;
+  margin: 1em;
+}
+
+.container:hover > .card {
+  cursor: pointer;
+  transform: rotateY(180deg);
+}
+
+.card {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  transition: transform 1500ms;
+  transform-style: preserve-3d;
+}
+
+.front,
+.back {
+  height: 100%;
+  width: 100%; 
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.front {
+  background: green;
+}
+
+.back {
+  background-color: #3a3a3a;
+  transform: rotateY(180deg);
+  text-align: center;
+}
