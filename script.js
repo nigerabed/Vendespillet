@@ -1,6 +1,5 @@
 import data from "./data.json" assert { type: "json" };
 
-
 function addItem(card) {
   let box = document.getElementById("card-box");
 
@@ -9,8 +8,8 @@ function addItem(card) {
   container.setAttribute("class", "container");
   box.appendChild(container);
 
-  let div = document.createElement("div")
-  div.setAttribute("class", "card") ;
+  let div = document.createElement("div");
+  div.setAttribute("class", "card");
   div.innerHTML = `
     <div class="front"></div> 
     <div class="back"> 
@@ -22,15 +21,45 @@ function addItem(card) {
         description: ${card.description}
     </div> 
   `;
-  container.appendChild(div)
-  div.addEventListener("click", function handleClick(event){
-    div.classList.toggle("flipped")
-  })
+  container.appendChild(div);
+  div.addEventListener("click", function handleClick(event) {
+    div.classList.toggle("flipped");
+  });
 }
 
-for (let i = 0; i < 12; i++) {
-  addItem(data[i]);
+
+let dataCopy = data.slice(0, 12);
+let dataShuffle = data.slice(0, 12);
+shuffle(dataCopy);
+shuffle(dataShuffle);
+
+for (let i = 0; i < dataCopy.length; i++) {
+  addItem(dataCopy[i]);
+  addItem(dataShuffle[i]);
 }
 
+// to randomaize
+function shuffle(array) {
+
+    let currentIndex = array.length; //4
+    let  randomIndex;
+
+  // While there remain elements to shuffle.
+  while (currentIndex > 0) {
+  
+    // Pick a remaining element.
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    
+    currentIndex--;
+
+    // And swap it with the current element.
+    const temp = array[currentIndex];
+
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temp;
+  }
+
+  return array;
+}
 
 
