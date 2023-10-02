@@ -1,5 +1,11 @@
 import data from "./data.json" assert { type: "json" };
 
+//initialize emply placeholder
+
+let selectCard1 = "";
+let selectCard2 = "";
+
+
 function addItem(card) {
   let box = document.getElementById("card-box");
 
@@ -24,6 +30,8 @@ function addItem(card) {
   container.appendChild(div);
   div.addEventListener("click", function handleClick(event) {
     div.classList.toggle("flipped");
+
+    
   });
 }
 
