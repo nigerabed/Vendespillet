@@ -41,6 +41,17 @@ function addItem(card) {
     console.log("select 1 = " ,selectCard1);
     console.log("select 2 = ", selectCard2);
 
+    // check cards match or not
+
+    if (selectCard1 !== "" && selectCard2 !== ""){
+
+      if (selectCard1 === selectCard2){
+        let message = ` It's a match ${selectCard1}- ${selectCard2}`;
+        
+
+      }
+    }
+
   });
 }
 
