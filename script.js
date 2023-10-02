@@ -31,7 +31,16 @@ function addItem(card) {
   div.addEventListener("click", function handleClick(event) {
     div.classList.toggle("flipped");
 
-    
+    // assign or save card to the selectCard1 and selectCard2
+
+    if(selectCard1 === ""){
+      selectCard1 = card;
+    }else if (selectCard2 === ""){
+       selectCard2 = card;
+    }
+    console.log("select 1 = " ,selectCard1);
+    console.log("select 2 = ", selectCard2);
+
   });
 }
 
